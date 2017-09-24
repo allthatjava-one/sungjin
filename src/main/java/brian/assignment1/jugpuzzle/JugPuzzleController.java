@@ -53,23 +53,24 @@ public class JugPuzzleController {
         /**
          * FILL THIS IN (describe what this method is about)
          */
-        public void play(){
-                while(!jugPuzzle.getIsPuzzleSolved()){
-                        System.out.println(jugPuzzle); // called the toString() method of jugPuzzle
-                        int from, to;
-                        from = getMove("spill from jug: ", 0,2);
-                        to   = getMove("into jug: ",0,2);
-                        jugPuzzle.move(from,to);
-                }
-                if(jugPuzzle.getMoves()==1) {
-                    System.out.println("Congrats you solved it in "+jugPuzzle.getMoves()+" move!!");
-                } else {
-                	System.out.println("Congrats you solved it in "+jugPuzzle.getMoves()+" moves!!");
-                }
-        }
-
-        public static void main(String [] args){
-                JugPuzzleController jpcc=new JugPuzzleController();
-                jpcc.play();
-        }
+// FIXME : Original Code
+//        public void play(){
+//                while(!jugPuzzle.getIsPuzzleSolved()){
+//                        System.out.println(jugPuzzle); // called the toString() method of jugPuzzle
+//                        int from, to;
+//                        from = getMove("spill from jug: ", 0,2);
+//                        to   = getMove("into jug: ",0,2);
+//                        jugPuzzle.move(from,to);
+//                }
+//                if(jugPuzzle.getMoves()==1) {
+//                    System.out.println("Congrats you solved it in "+jugPuzzle.getMoves()+" move!!");
+//                } else {
+//                	System.out.println("Congrats you solved it in "+jugPuzzle.getMoves()+" moves!!");
+//                }
+//        }
+//
+//        public static void main(String [] args){
+//                JugPuzzleController jpcc=new JugPuzzleController();
+//                jpcc.play();
+//        }
 }

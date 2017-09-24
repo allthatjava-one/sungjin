@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Primes {
     public static void main(String [] args){
             System.out.println(primes(10000)[9999]);
-            System.out.println(primesLessThan(10000));
+//            System.out.println(primesLessThan(10000));	// FIXME : Original Code
 
             int n = 1000000;
             ArrayList<Integer> a;
