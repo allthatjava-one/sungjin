@@ -6,14 +6,14 @@ import java.util.List;
 
 public class Primes {
     public static void main(String [] args){
-            System.out.println(primes(10000)[9999]);
+//            System.out.println(primes(10000)[9999]);
 //            System.out.println(primesLessThan(10000));	// FIXME : Original Code
 
-            int n = 1000000;
-            ArrayList<Integer> a;
+//            int n = 1000000;
+    		int n = 10000;
+            List<Integer> a;
             long start, end;
             
-            /**
             start = System.currentTimeMillis();
             a = primesLessThan(n);
             end = System.currentTimeMillis();
@@ -24,6 +24,7 @@ public class Primes {
             end = System.currentTimeMillis();
             System.out.println(a.size()+ " " + (end-start));
             
+            /**
             start = System.currentTimeMillis();
             a = primesLessThanSieveAdd(n);
             end = System.currentTimeMillis();
@@ -65,19 +66,17 @@ public class Primes {
 	
 	public static List<Integer> primesLessThan(int n)
 	{
-		List<Integer> result = new ArrayList<>();
+		List<Integer> primes = new ArrayList<>();
 		
-		int current = 2;
-		while (current < n)
+		for (int i = 2; i < n; i++) 
 		{
-			if(isPrime(current))
+			if(isPrime(i))
 			{
-				result.add(current);
+				primes.add(i);
 			}
-			current++;
 		}
 		
-		return result;
+		return primes;
 	}
 	
 	public static List<Integer> primesLessThanSieveRemove(int n)
@@ -86,7 +85,7 @@ public class Primes {
 		
 		// Init
 		int counter = 2;
-		while( counter <= n )
+		while( counter < n )
 		{
 			primesToBe.add(counter);
 			counter++;
@@ -94,11 +93,10 @@ public class Primes {
 		
 		// Remove non primes
 		int startingIndex =0;
-		int cursor = startingIndex;
 
 		while( startingIndex != primesToBe.size() )
 		{
-			cursor = startingIndex+1;
+			int cursor = startingIndex+1;
 			int keyPrimeNo = primesToBe.get(startingIndex);
 			
 			while(cursor != primesToBe.size())

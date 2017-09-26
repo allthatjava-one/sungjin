@@ -1,6 +1,7 @@
-package ca.utoronto.utm.assignment1.primes;
+package sungjin.assignment1.completed;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 import java.util.Arrays;
 import java.util.List;
