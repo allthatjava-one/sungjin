@@ -10,8 +10,10 @@ All methods below are static
 
 isPrime(n) which returns whether integer n is prime.
 primes(n) which returns an array of the first n primes.
-primesLessThan(n) which returns an ArrayList of primes less than n by repeatedly calling isPrime on 2,3,4,...,n-1.
-primesLessThanSieveRemove(n) which maintains and returns an ArrayList of primes less than n using the following algorithm. 
+primesLessThan(n) which returns 
+ an ArrayList of primes less than n by repeatedly calling isPrime on 2,3,4,...,n-1.
+primesLessThanSieveRemove(n) which maintains 
+ and returns an ArrayList of primes less than n using the following algorithm. 
 We use pythons array notation to index into the array list below.
 
 fill ArrayList primes with numbers 2,3,..., n-1

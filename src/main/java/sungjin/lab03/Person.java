@@ -1,4 +1,4 @@
-package lab03.sungjin;
+package sungjin.lab03;
 
 
 public class Person {

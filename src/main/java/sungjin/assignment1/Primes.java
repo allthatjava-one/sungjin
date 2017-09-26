@@ -1,4 +1,4 @@
-package ca.utoronto.utm.assignment1.primes;
+package sungjin.assignment1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ListIterator;

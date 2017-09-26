@@ -1,4 +1,4 @@
-package ca.utoronto.utm.assignment1.primes;
+package sungjin.assignment1;
 
 import static org.junit.Assert.*;
 
