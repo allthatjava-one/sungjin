@@ -10,7 +10,7 @@ public class Primes {
 //            System.out.println(primesLessThan(10000));	// FIXME : Original Code
 
 //            int n = 1000000;
-    		int n = 10000;
+    		int n = 100000;
             List<Integer> a;
             long start, end;
             
@@ -24,7 +24,6 @@ public class Primes {
             end = System.currentTimeMillis();
             System.out.println(a.size()+ " " + (end-start));
             
-            /**
             start = System.currentTimeMillis();
             a = primesLessThanSieveAdd(n);
             end = System.currentTimeMillis();
@@ -34,7 +33,6 @@ public class Primes {
             a = primesLessThanSieveRemove2(n);
             end = System.currentTimeMillis();
             System.out.println(a.size()+ " " + (end-start));
-            **/
     }
 	public static boolean isPrime(int n) {
 		if (n < 2) {
@@ -118,6 +116,42 @@ public class Primes {
 	}
 	
 	/**
+	 * primesLessThanSieveAdd(n) which returns an ArrayList of primes less than n
+
+This time, start with an empty ArrayList primes, 
+for i range(2,n):
+    check that none of the current members of primes divides i
+    if none do, then add i to primes
+Finally return primes.
+Again, add in any improvements you can think of to improve performance while maintaining the basic algorithm.
+	 * @param n
+	 * @return
+	 */
+	public static List<Integer> primesLessThanSieveAdd(int n)
+	{
+		List<Integer> primesToBe = new ArrayList<>();
+	
+		OUTER:
+		for(int i=2; i < n; i++) {
+			if( !primesToBe.isEmpty() )
+			{
+				for (Integer integer : primesToBe) {
+					if( i % integer.intValue() == 0)
+					{
+						continue OUTER;
+					}
+				}
+				primesToBe.add(i);
+				
+			}else {
+				primesToBe.add(i);
+			}
+		}
+		
+		return primesToBe;
+	}
+	
+	/**
 	 * 
 start with a boolean array, primes, of size n, with all entries set to true
 now set each primes[j] to false, if it is a multiple of 2 (and not 2).
@@ -138,18 +172,25 @@ Which of the primesLessThan* is fastest? Why?
 		boolean[] primes = new boolean[n];
 		Arrays.fill(primes, true);
 		
-		for(int j=2; j < n; j++)
+		primes[0]=false;
+		primes[1]=false;
+		
+		for(int i=2; i < n; i++)
 		{
-			for(int i=2; i < j; i++)
+			for(int j=2; j < n; j++)
 			{
-				if( j%i == 0 && j != 2)
+				if( i != j && i%j == 0 )
 				{
-					primes[j]=false;
+					primes[i]=false;
 				}
 			}
 		}
 		
-		System.out.println(Arrays.toString(primes));
+		for(int k=0; k < primes.length;k++)
+		{
+			if( primes[k] )
+				result.add( k );
+		}
 		
 		return result;
 	}

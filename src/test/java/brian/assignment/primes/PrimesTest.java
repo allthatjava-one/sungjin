@@ -56,18 +56,30 @@ public class PrimesTest {
 				Arrays.toString(Primes.primesLessThanSieveRemove(20).toArray()));
 	}
 	
+	@Test
+	public void testPrimesLessThanAdd() {
+
+		assertEquals("primes", 
+				Arrays.toString(new int[]{2,3,5,7}),
+				Arrays.toString(Primes.primesLessThanSieveAdd(10).toArray()));
+		
+		assertEquals("primes", 
+				Arrays.toString(new int[]{2,3,5,7,11,13,17,19}),
+				Arrays.toString(Primes.primesLessThanSieveAdd(20).toArray()));
+	}
+	
 
 	@Test
 	public void testPrimesLessThanSieveRemove2(){
-//		List<Integer> result = Primes.primesLessThanSieveRemove2(10);
-//		
-//		List<Integer> expected = new ArrayList<>();
-//		expected.add(new Integer(2));
-//		expected.add(new Integer(3));
-//		expected.add(new Integer(5));
-//		expected.add(new Integer(7));
-//		
-//		Assert.assertEquals("result", expected, result);
+		List<Integer> result = Primes.primesLessThanSieveRemove2(10);
+		
+		List<Integer> expected = new ArrayList<>();
+		expected.add(new Integer(2));
+		expected.add(new Integer(3));
+		expected.add(new Integer(5));
+		expected.add(new Integer(7));
+		
+		Assert.assertEquals("result", expected, result);
 	}
 	
 }
