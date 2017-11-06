@@ -14,7 +14,8 @@ public class PrimesTest {
 		assertEquals("3 is prime", true, Primes.isPrime(3));
 		assertEquals("5 is prime", true, Primes.isPrime(5));
 		assertEquals("11 is prime", true, Primes.isPrime(11));
-		assertEquals("101 is prime", true, Primes.isPrime(101));
+		//Jin's comment 
+		assertEquals("103 is prime", true, Primes.isPrime(101));
 		
 		assertEquals("-7 is not prime", false, Primes.isPrime(-7));
 		assertEquals("-1 is not prime", false, Primes.isPrime(-1));
