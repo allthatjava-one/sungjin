@@ -21,7 +21,7 @@ public class PrimesTest {
 		assertEquals("0 is not prime", false, Primes.isPrime(-0));
 		assertEquals("1 is not prime", false, Primes.isPrime(1));
 		assertEquals("4 is not prime", false, Primes.isPrime(4));
-		assertEquals("6 is not prime", false, Primes.isPrime(6));
+		assertEquals("9 is not prime", false, Primes.isPrime(6));
 	}
 
 }
